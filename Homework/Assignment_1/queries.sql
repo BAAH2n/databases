@@ -26,4 +26,5 @@ WHERE s.depth_meters > (
     FROM stations
 )
 GROUP BY s.station_name
-ORDER BY s.opening_year                                                                                                                        
+ORDER BY s.opening_year 
+LIMIT 10                                                                                                                       
