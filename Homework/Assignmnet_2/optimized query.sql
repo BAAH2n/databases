@@ -5,6 +5,7 @@ CREATE INDEX idx_comments_post_id ON comments (post_id);
 CREATE INDEX idx_users_county ON users (country);
 CREATE INDEX idx_comments_user_id ON comments (user_id);
 
+EXPLAIN ANALYZE
 WITH stats_about_users AS (
 	SELECT p.user_id, 
     COUNT(p.post_id) AS quantity_of_posts_by_author, 
